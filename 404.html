@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ECES E-Book Library has moved</title>
+<script>
+  // >>> If your new library link is different, change it here <<<
+  var NEW_LINK = "https://eces-ebooks.pages.dev/";
+
+  // keeps the grade or book the learner was opening
+  (function () {
+    var q = location.search, h = location.hash, path = location.pathname;
+    var page = /read(\.html)?$/.test(path) ? "read" : "";
+    location.replace(NEW_LINK.replace(/\/$/, "") + "/" + page + q + h);
+  })();
+</script>
+<style>
+  body { font-family: "Segoe UI", Arial, sans-serif; background: #14245a; color: #fff; display: flex; min-height: 100vh;
+         align-items: center; justify-content: center; margin: 0; text-align: center; padding: 20px; }
+  a { color: #f5c518; font-weight: 700; font-size: 20px; }
+</style>
+</head>
+<body>
+  <div>
+    <h1>The ECES E-Book Library has moved</h1>
+    <p>Opening the new library...</p>
+    <p><a id="go" href="https://eces-ebooks.pages.dev/">Tap here if it does not open</a></p>
+  </div>
+  <script>document.getElementById('go').href = NEW_LINK;</script>
+</body>
+</html>
